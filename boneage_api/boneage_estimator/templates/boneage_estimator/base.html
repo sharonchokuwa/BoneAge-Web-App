@@ -1,0 +1,59 @@
+{% load static %}
+<html>
+    <head>
+        <style>
+            * {
+              box-sizing: border-box;
+            }
+
+            html
+            {
+                font-size: 100%;
+            }
+
+            .column {
+              float: left;
+              width: 50%;
+              padding: 20px;
+            }
+
+            .myclass{
+                      text-align:center  !important;
+                      margin-left: -25%;
+            }
+
+            h1 { 
+                  display: block;
+                  font-size: 1.5em;
+                  margin-top: 3.83em;
+                  margin-bottom: 1.83em;
+                  margin-left: 0.83em;
+                  margin-right: 0;
+                  font-weight: bold;
+                }
+
+        </style>
+        <title>Bone Age Estimator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+
+        
+
+    </head>
+    <body>
+        <div class="page-header">
+            <br>
+            <h1 style="color:#191970;">Bone Age Estimator</h1>
+            <br>
+            <hr>
+            <br>
+        </div>
+        <div class="content container">
+                {% block content %}
+                {% endblock %}
+        </div>
+    </body>
+</html>

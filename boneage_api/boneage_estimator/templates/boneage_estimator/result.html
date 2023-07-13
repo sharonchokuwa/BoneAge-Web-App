@@ -1,0 +1,26 @@
+{% extends 'boneage_estimator/base.html' %}
+
+{% block content %}
+
+    <h2>Bone Age Assessment Result</h2>
+ <div class="row">
+     <div class="column">
+    	<img src="{{original_image.url}}" height="400" width="400"/> 	
+  	</div>
+  	
+  	<div class="column">
+    	<img src="{{processed_image.url}}" height="400" width="400"/>
+    </div>
+</div>
+
+<div class="row">
+     <div class="column">
+    	<h5 class="myclass" style="color:#191970;"> Chronological Age:    {{age}}months </h5> 	
+  	</div>
+  	
+  	<div class="column">
+    	<h5 class="myclass" style="color:#191970;"> Bone Age:    {{prediction}}months</h5>
+    </div>
+</div>
+  	
+{% endblock %}

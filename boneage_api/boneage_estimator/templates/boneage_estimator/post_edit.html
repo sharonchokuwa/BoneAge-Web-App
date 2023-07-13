@@ -1,0 +1,30 @@
+{% extends 'boneage_estimator/base.html' %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4">               
+	<h2>Patient Information</h2>
+	<form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+
+	  {% for hidden_field in form.hidden_fields %}
+	    {{ hidden_field }}
+	  {% endfor %}
+
+	  {% for field in form.visible_fields %}
+	    <div class="form-group">
+	      {{ field.label_tag }}
+	      {% render_field field class="form-control" %}
+	      {% if field.help_text %}
+	        <big class="form-text text-muted">{{ field.help_text }}</big>
+	      {% endif %}
+	    </div>
+	  {% endfor %}
+
+	  <button type="submit" class="save btn btn-primary" style="background-color:#191970;">Calculate</button>
+	</form>
+
+	 </div>
+</div>
+{% endblock %}
